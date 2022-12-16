@@ -6,7 +6,7 @@
   "scripts": {
     "dev:client": "yarn --cwd services/client dev",
     "dev:server": "yarn --cwd services/server dev",
-    "dev": "concurrently \"yarn dev:client\" \"yarn dev:server\"",
+    "dev": "concurrently \"yarn dev:client\" \"yarn dev:server\" \"sh/db\"",
     "dev:compose:up": "docker compose -f docker-compose.dev.yml up -d",
     "dev:compose:stop": "docker compose -f docker-compose.dev.yml stop",
     "dev:compose:rm": "docker compose -f docker-compose.dev.yml rm",

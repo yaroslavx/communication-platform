@@ -1,6 +1,6 @@
 ARG NODE_VERSION=16.13.1
 
-FROM yaroslavx/yaroslavx/communication-platform_client AS client
+FROM yaroslavx/communication-platform_client AS client
 
 FROM node:$NODE_VERSION
 
@@ -12,7 +12,7 @@ RUN yarn
 
 COPY . .
 
-COPY --from=client /client/build /app/client/build
+COPY --from=client /client/dist /app/client/dist
 
 EXPOSE 5000
 

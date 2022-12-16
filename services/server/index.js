@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 if (process.env.ENV === 'production') {
-  const clientBuildPath = join(__dirname, 'client', 'build');
+  const clientBuildPath = join(__dirname, 'client', 'dist');
   app.use(express.static(clientBuildPath));
 }
 
